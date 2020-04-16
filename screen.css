@@ -1,0 +1,288 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,bi
+g,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd
+,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,d
+etails,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,a
+udio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,a
+side,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}html{line-height:
+
+1}body{line-height:inherit;}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockqu
+ote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+body{
+  font-family:"Helvetica Neue", Helvetica, Arial;
+}
+
+.sidebar{
+  position: fixed;
+  width: 140px;
+  height: 100%;
+  background:  #5cd65c;
+  top:0px;
+  left:-200px;
+}
+
+.sidebar header{
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  line-height: 70px;
+  background: red;
+}
+
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 50px;
+  font-size: 17px;
+  color: black;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 0.5px solid ;
+}
+
+label #btn,label #cancel{
+  position: absolute;
+  cursor: pointer;
+  background: #042331;
+  border-radius: 3px;
+}
+label #btn{
+  left: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+
+label #cancel{
+  z-index: 1111;
+  left: -115px;
+  top: 10px;
+  font-size: 15px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ;
+}
+
+#check:checked ~ .sidebar{
+  left: 0;
+}
+
+#check:checked ~ label #btn{
+  left: 150;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+  left: 110px;
+}
+
+html {
+ background-color: #70db70;
+ font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+ font-size: 1.25em;
+ line-height: 1.35em; /*wanted to make it have a little more space than what would normally be
+there*/
+ padding: 1.55em; /* 28px / 18px = 1.55em */
+ text-rendering: optimizeLegibility;
+}
+
+h1{
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: bold;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+p {
+  padding-bottom: 1.25em;
+}
+
+img {
+  display: block;
+  max-height: 125%;
+  max-width: 85%;
+}
+.title{
+  border:solid;
+  border-width: thick;
+  font-weight: 300;
+  padding: 0.25%;
+  color: black;
+  font-size: 5vw;
+  text-align: center;
+  }
+
+.selfpic{
+  max-width: 100%;
+  padding: 1.25em;  /*22.5px / 18px = 1.25em */
+  margin-top: 1em; /* 18px / 18px = 1em */
+}
+
+.selfpic figcaption{
+  left: -500px;
+  position: absolute;
+}
+
+.firstsection{
+  display: block;
+  grid-gap: 10px;
+  justify-content: center;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  padding-bottom: .25em;
+  }
+
+  .introduction{
+    justify-content: center;
+    align-self: center;
+    max-width: 85vw;
+    margin: auto;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    margin-right: 6vw;
+    background-color: #adebad;
+    border-radius: 1vw;
+    display: flex;
+    margin-bottom: 5vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  .selfintro{
+    flex: 1 1 auto ;
+    box-sizing: border-box;
+    padding: 1.5vw;
+    max-width: 60vw;
+    min-width: 40vw;
+  }
+
+  #careeraspects{
+    grid-template-areas:
+      "interships"
+      "coursework"
+      "experience";
+    display: grid;
+    grid-column-gap: 5vw;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-row-gap: 5vw;
+    margin-left: 7vw;
+    margin-right: 7vw;
+  }
+
+
+  #careeraspects p{
+    padding: 0.5em; /*wanted a bit more concise boxes*/
+  }
+
+  #internships,
+  #coursework,
+  #experience{
+    background:  #adebad;
+    text-align: center;
+    border-radius: 1.5vw;
+  }
+
+
+
+   h2, h6{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: underline;
+    padding-top: 1em;
+    padding-bottom: 0.75em;
+    text-align: center;
+
+  }
+
+  h3, h4, h5{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: underline;
+  }
+  @media screen and (max-width: 400px){
+    .title{
+      font-size: 10vw;
+      }
+  }
+
+  @media screen and (min-width: 390px){
+    h6{
+      font-size: 1.25em;
+    }
+}
+@media screen and (min-width: 440px){
+  .title{
+    font-size: 7.5vw;
+    }
+  .selfpic{
+    max-width: 70%;
+  }
+  .firstsection{
+    margin-left: 1.25vw;
+    margin-right: 1.25vw;
+  }
+}
+
+@media screen and (min-width: 600px){
+  .firstsection{
+    padding-bottom: 1em;
+  }
+}
+
+
+
+  @media screen and (min-width: 950px){
+    h6{
+      font-size: 1.5em;
+    }
+    .introduction{
+      margin-right: 10vw;
+      margin-left: 10vw;
+      flex-wrap: nowrap;
+    }
+    .selfintro{
+      max-width: 50vw;
+      margin-top: 0.5em;
+    }
+    .selfpic{
+      padding: 1.25em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      max-width: 100%;
+    }
+    #careeraspects{
+      grid-template-columns: 2fr 2fr 2fr;
+      grid-column-gap: 3vw;
+      grid-template-rows: auto;
+      grid-row-gap: 0;
+    }
+  }
+
+  @media screen and (min-width: 850px){
+    .firstsection{
+      margin-left: 5vw;
+      margin-right: 5vw;
+    }
+
+    .mycontactinfo{
+      padding-top: 1em;
+      padding-bottom: 1em;
+      text-align: center;
+    }
+
+
+    ul{
+      list-style-type: square;
+      text-align: center;
+      display: inline-block;
+    }
